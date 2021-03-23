@@ -28,21 +28,57 @@ GridPane pane = new GridPane();
 
 ### Testing
 
-A step by step series of examples that you developed to properly test the program. 
-
-Say what the step will be
+Step 1: Create Text Fields & Button
 
 ```
-Give the example
+protected TextField USDollars = new TextField();
+	protected TextField CanadianDollars = new TextField();
+        protected Button Convert = new Button("Convert");
+```
+Step 2: Create Pane
+
+```
+GridPane pane = new GridPane();
+        pane.setAlignment(Pos.CENTER_LEFT);
+        pane.add(new Label("US Dollars"), 0, 0);
+        pane.add(USDollars, 1, 0);
+        pane.add(new Label("Canadian Dollars"), 0, 1);
+	pane.add(CanadianDollars, 1, 1);
+        pane.add(Convert, 1, 2);
+```
+Step 3: Styles
+```
+  USDollars.setStyle("-fx-border-color: LIGHTBLUE");
+                USDollars.setPrefWidth(275);
+                USDollars.setMaxWidth(275);
+                CanadianDollars.setStyle("-fx-border-color: LIGHTBLUE");
+                Convert.setStyle("-fx-border-color: LIGHTBLUE");
+```
+Step 4: 
+```
+Create Method for Button to work
+```
+Convert.setOnMousePressed(e -> {
+          
+            if(!USDollars.getText().equals("")){
+                double Dollars = Double.parseDouble(USDollars.getText());
+                double CDollars = Dollars * 1.5;
+                CanadianDollars.setText("" + CDollars);
+            }
+      
+        });
+```
+Step 5: Create a scene and place it in the stage
+```
+Scene scene = new Scene(pane, 375, 125);
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Convert US Dollars to Canadian Dollars");
+        primaryStage.show();
+```
 ```
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+You can get some data out of this by entering a dollar value decimal or whole and convert it into a canadian dollar
+for example if you put 1 dollar, you get 1.50 dollars in canadian.
 
 ## Notes
 
