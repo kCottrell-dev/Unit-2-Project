@@ -48,7 +48,7 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Notes
 
-Explain any issues or testing instructions.
+No issues or notes.
 
 ## Do not change content below this line
 ## Adapted from a README Built With
