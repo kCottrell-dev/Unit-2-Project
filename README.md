@@ -1,24 +1,31 @@
-# Project Title
+# Unit 2 Project
 
-One Paragraph of project description goes here
+Write a program that converts US dollars into Canadian dollars, as shown in the following figure. The program let the user enter an amount in US dollars and display it equivalent value in Canadian dollars when clicking the Convert button. One dollar is 1.5 Canadian dollars.
 
 ## Example Output
 
 This image will display as your example output. Name the image README.jpg in your project folder.
 
-![Sample Output](README.jpg)
+![Sample Output](Conversion.jpg)
 
 ## Analysis Steps
 
-This section should restate the assignment and explain how you analyzed the requirements in order 
-to develop a solution.
+Well regarding the description that was given to me on the canvas assignment it seems that I have to develop a simple GUI or user interface that converts US Dollars to 
+Canadian Dollars. The math is shown in the picture of what a canadian dollar equals to one US Dollar so this program should be easy to make.
 
 ### Design
 
-How did you approach your program design? Did you use multiple classes to define various objects?
+No I only used one class and I basically made one single pane where I added all the requirements to the GUI, the textfields and the button. 
+Then once that was implemented I did a simple PressButton event and added the math needed for the conversion inside the event.
 
 ```
-Give examples
+GridPane pane = new GridPane();
+        pane.setAlignment(Pos.CENTER_LEFT);
+        pane.add(new Label("US Dollars"), 0, 0);
+        pane.add(USDollars, 1, 0);
+        pane.add(new Label("Canadian Dollars"), 0, 1);
+	pane.add(CanadianDollars, 1, 1);
+        pane.add(Convert, 1, 2);
 ```
 
 ### Testing
