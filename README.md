@@ -4,8 +4,6 @@ Write a program that converts US dollars into Canadian dollars, as shown in the 
 
 ## Example Output
 
-This image will display as your example output. Name the image README.jpg in your project folder.
-
 ![Sample Output](Conversion.JPG)
 
 ## Analysis Steps
